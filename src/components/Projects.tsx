@@ -5,25 +5,25 @@ import { Github, ExternalLink } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "Fraud Detection System",
-      description: "Advanced machine learning classification models to detect fraudulent transactions with high accuracy. Implements various algorithms including Random Forest, SVM, and ensemble methods.",
-      tech: ["Python", "Scikit-Learn", "Pandas", "Machine Learning"],
-      github: "https://github.com/VanshSa017/Fraud-Detection",
+      title: "DoS/DDoS Prediction ML Model",
+      description: "Advanced machine learning model for detecting and predicting Denial of Service and Distributed Denial of Service attacks. Uses network traffic analysis and pattern recognition to identify malicious activities in real-time, helping strengthen cybersecurity defenses.",
+      tech: ["Python", "Machine Learning", "Cybersecurity", "Network Analysis"],
+      github: "https://github.com/VanshSa017/DDOS_Detection",
       gradient: "from-red-500 to-orange-500"
     },
     {
-      title: "Medical Image Classification",
-      description: "Deep learning project using Convolutional Neural Networks (CNN) with PyTorch for detecting diseases from X-ray images. Achieves high accuracy in medical diagnosis.",
-      tech: ["PyTorch", "CNN", "Computer Vision", "Healthcare"],
-      github: "https://github.com/VanshSa017/Medical-Image-Classifier",
-      gradient: "from-green-500 to-teal-500"
+      title: "CodeGenie",
+      description: "An intelligent code generation and assistance platform that leverages AI to help developers write better code faster. Features include code completion, bug detection, and automated code optimization with support for multiple programming languages.",
+      tech: ["AI/ML", "Code Generation", "Developer Tools", "Full Stack"],
+      github: "https://github.com/exhuries/CodeGenie-Final/tree/main/Final%20Deliverables",
+      gradient: "from-purple-500 to-indigo-500"
     },
     {
-      title: "NLP-Based Resume Parser",
-      description: "Intelligent resume parsing system that extracts and classifies key sections from PDF resumes using advanced NLP techniques and machine learning algorithms.",
-      tech: ["NLP", "Python", "PDF Processing", "Text Classification"],
-      github: "https://github.com/VanshSa017/Resume-Parser",
-      gradient: "from-blue-500 to-indigo-500"
+      title: "JobPortal Website",
+      description: "Comprehensive job portal platform connecting employers with job seekers. Features include job posting, application management, resume upload, advanced search filters, and real-time notifications. Built with modern web technologies for optimal user experience.",
+      tech: ["Full Stack", "Web Development", "Database", "User Management"],
+      github: "https://github.com/VanshSa017/JobPortal",
+      gradient: "from-blue-500 to-teal-500"
     }
   ];
 
