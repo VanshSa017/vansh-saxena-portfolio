@@ -31,11 +31,11 @@ const Projects = () => {
     <section id="projects" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 opacity-0 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:forwards]">
             Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full opacity-0 animate-scale-in [animation-delay:0.4s] [animation-fill-mode:forwards]"></div>
+          <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto opacity-0 animate-fade-in [animation-delay:0.6s] [animation-fill-mode:forwards]">
             Real-world applications of machine learning and AI solving complex problems
           </p>
         </div>
@@ -44,13 +44,17 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 transform hover:-translate-y-2 opacity-0 animate-fade-in"
+              style={{
+                animationDelay: `${0.8 + index * 0.2}s`,
+                animationFillMode: 'forwards'
+              }}
             >
-              <div className={`h-2 bg-gradient-to-r ${project.gradient}`}></div>
+              <div className={`h-2 bg-gradient-to-r ${project.gradient} group-hover:h-3 transition-all duration-300`}></div>
               
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {project.title}
                   </h3>
                   <div className="flex gap-3">
@@ -58,9 +62,9 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                      className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-lg"
                     >
-                      <Github size={20} className="text-gray-600 dark:text-gray-300" />
+                      <Github size={20} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300" />
                     </a>
                   </div>
                 </div>
@@ -70,10 +74,14 @@ const Projects = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
+                  {project.tech.map((tech, techIndex) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-all duration-300 hover:scale-105 opacity-0 animate-fade-in"
+                      style={{
+                        animationDelay: `${1.2 + index * 0.2 + techIndex * 0.1}s`,
+                        animationFillMode: 'forwards'
+                      }}
                     >
                       {tech}
                     </span>
@@ -84,12 +92,12 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 opacity-0 animate-fade-in [animation-delay:2s] [animation-fill-mode:forwards]">
           <a
             href="https://www.github.com/VanshSa017"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 transform hover:-translate-y-1"
           >
             <Github size={20} />
             <span>View All Projects</span>

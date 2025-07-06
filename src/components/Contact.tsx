@@ -38,48 +38,48 @@ const Contact = () => {
     <section id="contact" className="py-20 px-6 bg-white/50 dark:bg-gray-800/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 opacity-0 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:forwards]">
             Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full opacity-0 animate-scale-in [animation-delay:0.4s] [animation-fill-mode:forwards]"></div>
+          <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto opacity-0 animate-fade-in [animation-delay:0.6s] [animation-fill-mode:forwards]">
             Let's discuss opportunities, collaborations, or just have a chat about data science and AI
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+          <div className="space-y-8 opacity-0 animate-fade-in [animation-delay:0.8s] [animation-fill-mode:forwards]">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform hover:-translate-y-2">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Contact Information
               </h3>
               
               <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                <div className="flex items-center gap-4 group">
+                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg group-hover:scale-110 transition-transform duration-300">
                     <Mail className="text-blue-600 dark:text-blue-400" size={24} />
                   </div>
                   <div>
                     <div className="font-medium text-gray-900 dark:text-white">Email</div>
                     <a 
                       href="mailto:vanshsaxena7781@gmail.com"
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
+                      className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-300"
                     >
                       vanshsaxena7781@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                <div className="flex items-center gap-4 group">
+                  <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg group-hover:scale-110 transition-transform duration-300">
                     <Phone className="text-green-600 dark:text-green-400" size={24} />
                   </div>
                   <div>
                     <div className="font-medium text-gray-900 dark:text-white">Phone</div>
                     <a 
                       href="tel:8299641529"
-                      className="text-green-600 dark:text-green-400 hover:underline"
+                      className="text-green-600 dark:text-green-400 hover:underline transition-colors duration-300"
                     >
                       +91 8299641529
                     </a>
@@ -87,7 +87,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl">
+              <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl hover:scale-105 transition-transform duration-300">
                 <h4 className="font-bold text-gray-900 dark:text-white mb-3">
                   Ready to collaborate?
                 </h4>
@@ -99,7 +99,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 animate-fade-in [animation-delay:1s] [animation-fill-mode:forwards]">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Send a Message
             </h3>
@@ -117,7 +117,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300 hover:shadow-md focus:scale-105"
                     placeholder="Your Name"
                   />
                 </div>
@@ -132,7 +132,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300 hover:shadow-md focus:scale-105"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -149,7 +149,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300 hover:shadow-md focus:scale-105"
                   placeholder="What's this about?"
                 />
               </div>
@@ -165,7 +165,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300 resize-none hover:shadow-md focus:scale-105"
                   placeholder="Tell me about your project or just say hello!"
                 />
               </div>
@@ -173,7 +173,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 transform hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>

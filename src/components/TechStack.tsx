@@ -35,28 +35,39 @@ const TechStack = () => {
     <section id="tech-stack" className="py-20 px-6 bg-white/50 dark:bg-gray-800/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 opacity-0 animate-fade-in [animation-delay:0.2s] [animation-fill-mode:forwards]">
             Tech Stack & Tools
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full opacity-0 animate-scale-in [animation-delay:0.4s] [animation-fill-mode:forwards]"></div>
+          <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto opacity-0 animate-fade-in [animation-delay:0.6s] [animation-fill-mode:forwards]">
             Technologies and tools I use to build intelligent systems and analyze data
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {Object.entries(technologies).map(([category, techs]) => (
-            <div key={category} className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+          {Object.entries(technologies).map(([category, techs], categoryIndex) => (
+            <div
+              key={category}
+              className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 transform hover:-translate-y-2 opacity-0 animate-fade-in"
+              style={{
+                animationDelay: `${0.8 + categoryIndex * 0.2}s`,
+                animationFillMode: 'forwards'
+              }}
+            >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
                 {category}
               </h3>
               <div className="space-y-3">
-                {techs.map((tech) => (
+                {techs.map((tech, techIndex) => (
                   <div
                     key={tech.name}
-                    className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
+                    className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-all duration-300 hover:scale-105 transform hover:-translate-x-1 opacity-0 animate-fade-in"
+                    style={{
+                      animationDelay: `${1.2 + categoryIndex * 0.2 + techIndex * 0.1}s`,
+                      animationFillMode: 'forwards'
+                    }}
                   >
-                    <div className={`w-3 h-3 rounded-full ${tech.color}`}></div>
+                    <div className={`w-3 h-3 rounded-full ${tech.color} animate-pulse`}></div>
                     <span className="text-gray-700 dark:text-gray-300 font-medium">{tech.name}</span>
                   </div>
                 ))}
@@ -67,15 +78,15 @@ const TechStack = () => {
 
         {/* Skills visualization */}
         <div className="mt-16 grid md:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl text-white">
+          <div className="text-center p-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl text-white hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 transform hover:-translate-y-2 opacity-0 animate-fade-in [animation-delay:2s] [animation-fill-mode:forwards]">
             <div className="text-3xl font-bold mb-2">Machine Learning</div>
             <div className="text-blue-100">Classification, Regression, Clustering</div>
           </div>
-          <div className="text-center p-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl text-white">
+          <div className="text-center p-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl text-white hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 transform hover:-translate-y-2 opacity-0 animate-fade-in [animation-delay:2.2s] [animation-fill-mode:forwards]">
             <div className="text-3xl font-bold mb-2">Deep Learning</div>
             <div className="text-purple-100">Neural Networks, CNN, NLP</div>
           </div>
-          <div className="text-center p-6 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl text-white">
+          <div className="text-center p-6 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl text-white hover:shadow-xl hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-105 transform hover:-translate-y-2 opacity-0 animate-fade-in [animation-delay:2.4s] [animation-fill-mode:forwards]">
             <div className="text-3xl font-bold mb-2">Data Science</div>
             <div className="text-indigo-100">Analysis, Visualization, ETL</div>
           </div>

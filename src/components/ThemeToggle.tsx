@@ -28,14 +28,14 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+      className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 transform hover:-translate-y-1 opacity-0 animate-fade-in [animation-delay:2.5s] [animation-fill-mode:forwards]"
       aria-label="Toggle theme"
     >
       {isDark ? (
-        <div className="w-5 h-5 bg-yellow-400 rounded-full"></div>
+        <div className="w-5 h-5 bg-yellow-400 rounded-full animate-pulse"></div>
       ) : (
         <div className="w-5 h-5 bg-gray-700 rounded-full relative">
-          <div className="absolute top-0 right-0 w-3 h-3 bg-white rounded-full"></div>
+          <div className="absolute top-0 right-0 w-3 h-3 bg-white rounded-full animate-pulse"></div>
         </div>
       )}
     </button>
